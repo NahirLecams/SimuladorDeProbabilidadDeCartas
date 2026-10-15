@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<?import java.awt.Insets?>
+<VBox spacing="15.0" alignment="CENTER" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SimuladorController">
+    <padding>
+        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+    </padding>
+
+    <Label text="Simulador de Probabilidad de Cartas" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <!-- Botón para la primera extracción -->
+    <Button fx:id="btnPrimeraExtraccion" text="1. Realizar Primera Extracción" onAction="#handlePrimeraExtraccion" prefWidth="250.0"/>
+
+    <!-- Selector para la decisión del usuario -->
+    <HBox spacing="10.0" alignment="CENTER">
+        <Label text="¿Devolver carta al mazo?"/>
+        <ComboBox fx:id="cmbDevolverCarta" prefWidth="100.0"/>
+    </HBox>
+
+    <!-- Botón para la segunda extracción y evaluación -->
+    <Button fx:id="btnSegundaExtraccion" text="2. Realizar Segunda Extracción" onAction="#handleSegundaExtraccion" prefWidth="250.0"/>
+
+    <!-- Pantalla de bitácora/resultados -->
+    <TextArea fx:id="txtAreaResultados" editable="false" prefHeight="200.0" prefWidth="380.0" promptText="Los resultados de las extracciones aparecerán aquí..."/>
+</VBox>
